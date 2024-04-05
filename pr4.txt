@@ -1,0 +1,48 @@
+
+
+
+JUnit_Test.java
+package mypack;
+
+import static org.junit.Assert.*;
+
+
+import org.junit.Test;
+
+public class Junit_test {
+
+	@Test
+	public void test() {
+		String str="This is what demo of Junit";
+		assertEquals("This is what demo of Junit",str);
+				
+	}
+
+}
+
+
+TestRunner.java
+
+package mypacks;
+import mypack.Junit_test;
+
+import org.junit.runner.JUnitCore;
+import org.junit.runner.Result;
+import org.junit.runner.notification.Failure;
+public class myclass {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		Result result= JUnitCore.runClasses(Junit_test.class);
+		for (Failure failuer: result.getFailures())
+		{
+			System.out.println(failuer.toString());
+		}
+		System.out.println("RESULT === "+result.wasSuccessful());
+	}
+
+	}
+
+

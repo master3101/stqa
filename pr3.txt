@@ -1,0 +1,20 @@
+PRAC 3
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+public class myclass {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a=10,b=20;
+		System.out.println("hi....");
+		System.out.println(a+b);
+		System.out.println("Demo....");
+		WebDriver driver=new FirefoxDriver();
+		driver.get("https://www.facebook.com/");
+		driver.manage().window().maximize();
+	}
+
+}
